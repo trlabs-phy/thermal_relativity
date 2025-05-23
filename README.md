@@ -8,27 +8,35 @@ Thermal Relativity is a cosmological model that unifies thermodynamics, quantum 
 
 The simulations in this repository include entropy flow modeling, the thermodynamic arrow of time, absolute time calibration, and gravitational compression effects — key processes around the Planck scale.
 
+## Thermal Relativity: Time as a Measurement
+
+This repository contains Python simulations supporting the **Thermal Relativity** framework, which redefines time as a measurable quantity driven by entropy and expansion.
+
+These simulations focus on the thermodynamic and temporal dynamics of the early universe, specifically spanning the Planck epoch through the onset of cosmic inflation and redshift formation.
+
 ## Contents
 
 | File | Description |
 |------|-------------|
-| `entropy_as_the_clock_planck.py` | Models entropy as a function of thermal time, supporting the hypothesis that entropy increase acts as a clock. |
-| `time_proof_planck.py` | Computes quantitative evidence for absolute time based on thermodynamic and gravitational variables. |
-| `arrow_of_time_planck.py` | Visualizes and simulates the thermodynamic arrow of time in early cosmology. |
-| `earth_ptf_planck.py` | Aligns Earth's proper time field (PTF) with the Absolute Time Field (ATF) using gravitational potentials. |
 | `absolute_time_redshift_planck.py` | Connects redshift and cosmic expansion to an Absolute Time framework during the Planck epoch. |
+| `arrow_of_time_planck.py` | Visualizes and simulates the thermodynamic arrow of time in early cosmology. |
+| `time_proof_planck.py` | Computes quantitative evidence for absolute time based on thermodynamic and gravitational variables. |
+| `earth_ptf_planck.py` | Aligns Earth's proper time field (PTF) with the Absolute Time Field (ATF) using gravitational potentials. |
+| `entropy_as_the_clock_planck.py` | Models entropy as a function of thermal time, supporting the hypothesis that entropy increase acts as a clock. |
+
 
 ## Requirements
 All scripts use standard scientific Python packages. Install dependencies with:
 
 ```bash
 pip install -r requirements.txt
-
+```
 ## Usage
 Each script is self-contained and can be executed directly:
 
+```bash
 python entropy_as_the_clock_planck.py
-
+```
 Graphical outputs and console data will demonstrate key relationships and principles.
 
 ## Background
@@ -51,6 +59,7 @@ If you use this repository or the *Time as a Measurement* simulations in your re
   note         = {Python simulations for cosmological modeling},
 }
 
+```
 ## Author
 T. Matthew Ressler
 Independent Researcher, Troy, MI
