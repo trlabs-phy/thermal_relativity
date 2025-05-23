@@ -34,6 +34,23 @@ Graphical outputs and console data will demonstrate key relationships and princi
 ## Background
 These scripts are developed to accompany the Time as a Measurement thesis and broader Thermal Relativity framework. For the full theory, equations, and publications, see:
 
+## 📖 Citation
+
+If you use this repository or the *Time as a Measurement* simulations in your research or publication, please cite:
+
+> Ressler, T. Matthew. *Thermal Relativity: Time as a Measurement*. 2025.  
+> GitHub repository: [github.com/trmattressler/thermal-relativity](https://github.com/your-username/thermal-relativity)
+
+```bibtex
+@misc{ressler2025taam,
+  author       = {Ressler, T. Matthew},
+  title        = {Thermal Relativity: Time as a Measurement},
+  year         = {2025},
+  publisher    = {GitHub},
+  howpublished = {\url{https://github.com/trmattressler/thermal-relativity}},
+  note         = {Python simulations for cosmological modeling},
+}
+
 ## Author
 T. Matthew Ressler
 Independent Researcher, Troy, MI
