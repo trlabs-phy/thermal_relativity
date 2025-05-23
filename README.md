@@ -1,6 +1,3 @@
-# thermal_relativity
-Simulations and models supporting the Thermal Relativity framework (Time as a Measurement).
-
 # Thermal Relativity: Planck Epoch Simulations
 
 This repository contains Python scripts supporting the **Thermal Relativity** framework developed by T. Matthew Ressler. These simulations explore fundamental thermodynamic and temporal principles as applied to the early universe — particularly within and around the Planck epoch.
