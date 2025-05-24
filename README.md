@@ -47,7 +47,7 @@ These scripts are developed to accompany the Time as a Measurement thesis and br
 If you use this repository or the *Time as a Measurement* simulations in your research or publication, please cite:
 
 > Ressler, T. Matthew. *Thermal Relativity: Time as a Measurement*. 2025.  
-> GitHub repository: [github.com/trmattressler/thermal-relativity](https://github.com/trmattressler/thermal-relativity)
+> GitHub repository: [github.com/trmattressler/thermal_relativity](https://github.com/trmattressler/thermal_relativity)
 
 ```bibtex
 @misc{ressler2025taam,
