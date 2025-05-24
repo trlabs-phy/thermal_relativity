@@ -55,7 +55,7 @@ If you use this repository or the *Time as a Measurement* simulations in your re
   title        = {Thermal Relativity: Time as a Measurement},
   year         = {2025},
   publisher    = {GitHub},
-  howpublished = {\url{https://github.com/trmattressler/thermal-relativity}},
+  howpublished = {\url{https://github.com/trmattressler/thermal_relativity}},
   note         = {Python simulations for cosmological modeling},
 }
 
