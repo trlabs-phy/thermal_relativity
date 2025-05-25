@@ -8,7 +8,7 @@ Thermal Relativity is a cosmological model that unifies thermodynamics, quantum 
 
 The simulations in this repository include entropy flow modeling, the thermodynamic arrow of time, absolute time calibration, and gravitational compression effects — key processes around the Planck scale.
 
-## Thermal Relativity: Time as a Measurement
+# Thermal Relativity: Time as a Measurement (TR:TaaM)
 
 This repository contains Python simulations supporting the **Time as a Measurement** framework, which redefines time as a measurable quantity driven by entropy and expansion.
 
