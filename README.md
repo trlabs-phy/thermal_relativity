@@ -10,7 +10,7 @@ The simulations in this repository include entropy flow modeling, the thermodyna
 
 ## Thermal Relativity: Time as a Measurement
 
-This repository contains Python simulations supporting the **Thermal Relativity** framework, which redefines time as a measurable quantity driven by entropy and expansion.
+This repository contains Python simulations supporting the **Time as a Measurement** framework, which redefines time as a measurable quantity driven by entropy and expansion.
 
 These simulations focus on the thermodynamic and temporal dynamics of the early universe, specifically spanning the Planck epoch through the onset of cosmic inflation and redshift formation.
 
@@ -40,7 +40,8 @@ python entropy_as_the_clock_planck.py
 Graphical outputs and console data will demonstrate key relationships and principles.
 
 ## Background
-These scripts are developed to accompany the Time as a Measurement thesis and broader Thermal Relativity framework. For the full theory, equations, and publications, see:
+These scripts are developed to accompany the Thermal Relativity framework. For the full theory, equations, and publications, see:
+
 
 ## Citation
 
