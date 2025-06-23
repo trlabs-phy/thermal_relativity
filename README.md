@@ -37,13 +37,13 @@ These simulations focus on the thermodynamic and temporal dynamics of the early 
 | `entropy_as_the_clock_planck.py` | Models entropy as a function of thermal time, supporting the hypothesis that entropy increase acts as a clock. |
 
 
-## Requirements
+# Requirements
 All scripts use standard scientific Python packages. Install dependencies with:
 
 ```bash
 pip install -r requirements.txt
 ```
-## Usage
+# Usage
 Each script is self-contained and can be executed directly:
 
 ```bash
@@ -51,10 +51,10 @@ python entropy_as_the_clock_planck.py
 ```
 Graphical outputs and console data will demonstrate key relationships and principles.
 
-## Background
+# Background
 These scripts are developed to accompany the Thermal Relativity framework. For the full theory, equations, and publications, see:
 
-## Citation
+# Citation
 
 If you use this repository or the *Time as a Measurement* simulations in your research or publication, please cite:
 
