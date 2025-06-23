@@ -11,6 +11,8 @@ These calculations support the Thermal Relativity framework by quantifying the m
 beyond the PTF, interpreted as the ATF Shell—a region where entropy and gravitational dynamics
 cease. Results are expressed in gigalight-years (Gly) and cubic gigalight-years (Gly³).
 
+This script produces a csv file: "thermodynamic_volumes.csv" that displays the results.
+
 Author: T. Matthew Ressler
 """
 import numpy as np
