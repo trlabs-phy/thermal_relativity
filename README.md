@@ -1,12 +1,24 @@
 # Thermal Relativity: Python Simulations
 
-This repository contains Python scripts supporting the **Thermal Relativity** framework developed by T. Matthew Ressler. These simulations explore fundamental thermodynamic and temporal principles as applied to the early universe — particularly within and around the Planck epoch.
+This repository contains Python scripts supporting the **Thermal Relativity** framework developed by T. Matthew Ressler. These simulations explore fundamental thermodynamic and temporal principles as they apply to our universe.
 
 ## Overview
 
 Thermal Relativity is a cosmological model that unifies thermodynamics, quantum mechanics, and cosmology by redefining time as a measurable quantity and proposing a Thermal Energy Conversion Cycle (TECC) as the clock of the universe.
 
-The simulations in this repository include entropy flow modeling, the thermodynamic arrow of time, absolute time calibration, and gravitational compression effects — key processes around the Planck scale.
+The simulations in this repository include entropy flow modeling, the thermodynamic arrow of time, absolute time calibration, and gravitational compression effects — key process in the evolution of our universe. Currently, this repository contains simulations for 2 papers in the series: Thermal Relativity (TR), and Thermal Relativity: Time as a Measurement (TR:TaaM).
+
+# Thermal Relativity (TR)
+
+This repository contains a Python simulation supporting the falsifiable claim that there is thermodynamic boundary structure in the universe.
+
+This simulation is a numerical simulation for calculating and visualizing the thermodynamic volume of the universe and the ATF Shell over time within the TR framework.
+
+## Contents
+
+| File | Description |
+|------|-------------|
+|`thermodynamic_volume.py'` | Demonstrates boundary conditions for entropy termination. |
 
 # Thermal Relativity: Time as a Measurement (TR:TaaM)
 
@@ -41,7 +53,6 @@ Graphical outputs and console data will demonstrate key relationships and princi
 
 ## Background
 These scripts are developed to accompany the Thermal Relativity framework. For the full theory, equations, and publications, see:
-
 
 ## Citation
 
