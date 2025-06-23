@@ -18,7 +18,7 @@ This simulation is a numerical simulation for calculating and visualizing the th
 
 | File | Description |
 |------|-------------|
-|`thermodynamic_volume.py'` | Demonstrates boundary conditions for entropy termination. |
+|`thermodynamic_volume.py` | Demonstrates boundary conditions for entropy termination. |
 
 # Thermal Relativity: Time as a Measurement (TR:TaaM)
 
