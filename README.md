@@ -125,6 +125,7 @@ Architectural guarantees:
     - `threed/` — Snapshot-based diagnostics
   - `utils/`
     - `build_snapshot.py`
+    - `certify_timeline.py`
     - `output.py`
   - `output/`
     - `history.json` 
