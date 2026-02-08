@@ -53,13 +53,45 @@ The solver produces a certified 1D capacity-scaling result:
 This confirms that **homogeneous 3D volume scaling emerges purely from causal
 thermal-energy bookkeeping**, not from geometric assumptions or expansion laws.
 
+## Certified Result: 1D Capacity Scaling
+
+![1D Capacity Scaling](capacity_scaling_1d.png)
+
 The corresponding plot is generated during certification and saved to:
 
-output/certify_planck/capacity_scaling_1d.pdf
-output/certify_planck/capacity_scaling_1d.png
+output/certify_planck/capacity_scaling_1d.pdf and output/certify_planck/capacity_scaling_1d.png
 
 This plot shows the instantaneous scaling exponent  
 $\mathrm{d}\ln V / \mathrm{d}\ln a$ converging to **3** with zero residual.
+
+
+## Solver Stats
+Overall Code Statistics
+| Metric   | Count |
+| -------- | ----- |
+| Lines    | 5,757 |
+| Code     | 2,921 |
+| Comments | 1,977 |
+| Blanks   | 859   |
+| Files    | 32    |
+
+Solver Code Statistics
+| Metric   | Count |
+| -------- | ----- |
+| Lines    | 540   |
+| Code     | 201   |
+| Comments | 252   |
+| Blanks   | 87    |
+| Files    | 5     |
+
+Certification Code Statistics
+| Metric   | Count |
+| -------- | ----- |
+| Lines    | 5,217 |
+| Code     | 2,720 |
+| Comments | 1,725 |
+| Blanks   | 772   |
+| Files    | 27    |
 
 ## Solver Architecture (High Level)
 
@@ -89,13 +121,21 @@ Architectural guarantees:
   - `certify_planck/`
     - `certify_1d.py` — Causal (1D) certification
     - `certify_3d.py` — 3D projection certification
-    - `causal/` — Pure 1D diagnostics
+    - `oned/` — Pure 1D diagnostics
     - `threed/` — Snapshot-based diagnostics
   - `utils/`
     - `build_snapshot.py`
     - `output.py`
   - `output/`
+    - `history.json` 
     - `certify_planck/`
+      - `capacity_scaling_1d.png`
+      -  `capacity_scaling_1d.pdf`
+      -  `summary_1d.csv`
+      -  `summary_1d.md`
+      -  `summary_3d.csv`
+      -  `summary_3d.json`
+      -  `summary_3d.md`
 
 ## Requirements
 
