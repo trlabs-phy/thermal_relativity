@@ -1,81 +1,183 @@
-# Thermal Relativity: Python Simulations
+# Thermal Relativity — Unified Boltzmann Solver
 
-This repository contains Python scripts supporting the **Thermal Relativity** framework developed by T. Matthew Ressler. These simulations explore fundamental thermodynamic and temporal principles as they apply to our universe.
+**Author:** T. Matthew Ressler  
+**Framework:** Thermal Relativity (TR)  
+**Language:** Python  
+**Status:** Research / Certification-grade solver  
+
+---
 
 ## Overview
 
-Thermal Relativity is a cosmological model that unifies thermodynamics, quantum mechanics, and cosmology by redefining time as a measurable quantity and proposing a Thermal Energy Conversion Cycle (TECC) as the clock of the universe.
+This repository contains a **from-first-principles Boltzmann-style solver**
+implementing the **Thermal Relativity (TR)** framework.
 
-The simulations in this repository include entropy flow modeling, the thermodynamic arrow of time, absolute time calibration, and gravitational compression effects — key process in the evolution of our universe. Currently, this repository contains simulations for 2 papers in the series: Thermal Relativity (TR), and Thermal Relativity: Time as a Measurement (TR:TaaM).
+Unlike ΛCDM or GR-based cosmological solvers, this codebase:
 
-# Thermal Relativity (TR)
+- Treats **causal ordering (η)** as the sole fundamental driver  
+- Models **proper time (τ)** as an accumulated physical response  
+- Evolves **thermal energy bookkeeping exactly**, with zero tunable parameters  
+- Separates **causal evolution (1D)** from **spatial realization (3D)** by design  
 
-This repository contains a Python simulation supporting the falsifiable claim that there is thermodynamic boundary structure in the universe.
+The solver is vertically certified:
 
-This simulation is a numerical simulation for calculating and visualizing the thermodynamic volume of the universe and the ATF Shell over time within the TR framework.
+> **Equation 0 → 1D causal consistency → 3D projection diagnostics**
 
-## Contents
+No fitting to observational data is performed at any stage.
 
-| File | Description |
-|------|-------------|
-|`thermodynamic_volume.py` | Demonstrates boundary conditions for entropy termination. |
+---
 
-# Thermal Relativity: Time as a Measurement (TR:TaaM)
+## What This Solver Demonstrates
 
-This repository contains Python simulations supporting the **Time as a Measurement** framework, which redefines time as a measurable quantity driven by entropy and expansion.
+- Exact **κ₍C₎ capacity closure** with zero residuals  
+- Emergent **homogeneous 3D scaling** from strictly 1D causal bookkeeping  
+- A measurable **ordering lag** (proper-time delay) as a physical remainder  
+- Clean architectural separation of:
+  - causality  
+  - geometry  
+  - observables  
+- Weak-field agreement with GR **without invoking spacetime or metrics**
 
-These simulations focus on the thermodynamic and temporal dynamics of the early universe, specifically spanning the Planck epoch through the onset of cosmic inflation and redshift formation.
+All results follow from bookkeeping identities and certified constraints,
+not model tuning.
 
-## Contents
+---
 
-| File | Description |
-|------|-------------|
-| `absolute_time_redshift_planck.py` | Connects redshift and cosmic expansion to an Absolute Time framework during the Planck epoch. |
-| `arrow_of_time_planck.py` | Visualizes and simulates the thermodynamic arrow of time in early cosmology. |
-| `time_proof_planck.py` | Computes quantitative evidence for absolute time based on thermodynamic and gravitational variables. |
-| `earth_ptf_planck.py` | Aligns Earth's proper time field (PTF) with the Absolute Time Field (ATF) using gravitational potentials. |
-| `entropy_as_the_clock_planck.py` | Models entropy as a function of thermal time, supporting the hypothesis that entropy increase acts as a clock. |
+## Certified Result: 1D Capacity Scaling
 
+The solver produces a certified 1D capacity-scaling result:
 
-# Requirements
-All scripts use standard scientific Python packages. Install dependencies with:
+- **Median slope:** 3.0  
+- **Residuals:** 0 (within numerical tolerance)
+
+This confirms that **homogeneous 3D volume scaling emerges purely from causal
+thermal-energy bookkeeping**, not from geometric assumptions or expansion laws.
+
+The corresponding plot is generated during certification and saved to:
+
+output/certify_planck/capacity_scaling_1d.pdf
+
+This plot shows the instantaneous scaling exponent  
+\(\mathrm{d}\ln V / \mathrm{d}\ln a\) converging to **3** with zero residual.
+
+## Solver Architecture (High Level)
+
+HistoryConfig
+  |
+  v
+history_step (Eq. 0 — the sole causal evolution)
+  |
+  v
+HistoryState
+  |
+  v
+Recorder (read-only history capture)
+  |
+  v
+certify_1d  -> causal consistency, ordering, visibility
+  |
+  v
+certify_3d  -> snapshot projection, structure, light bending
+
+Architectural guarantees:
+
+- Exactly **one solver loop**
+- **No feedback** from certification layers
+- **No geometry** in 1D causal evolution
+- **No causality** in 3D spatial realization
+
+## Repository Structure (Core)
+
+tr/
+|-- history.py              # Core Eq. 0 solver (THE solver)
+|-- state.py                # HistoryState container
+|-- recorder.py             # Read-only history capture
+|-- run_solver.py           # Main entrypoint
+|
+|-- certify_planck/
+|   |-- certify_1d.py       # Causal (1D) certification
+|   |-- certify_3d.py       # 3D projection certification
+|   |-- causal/             # Pure 1D diagnostics
+|   |-- threed/             # Snapshot-based diagnostics
+|
+|-- utils/
+|   |-- build_snapshot.py
+|   |-- output.py
+|
+|-- output/
+|   |-- certify_planck/
+
+## Requirements
+
+- **Python ≥ 3.10** (recommended: 3.11)
+- NumPy
+- Matplotlib
 
 ```bash
 pip install -r requirements.txt
 ```
-# Usage
-Each script is self-contained and can be executed directly:
+Run the solver from the repository root:
 
 ```bash
-python entropy_as_the_clock_planck.py
+pip install -r requirements.txt
+python run_solver.py
 ```
-Graphical outputs and console data will demonstrate key relationships and principles.
+**Outputs include:**
 
-# Background
-These scripts are developed to accompany the Thermal Relativity framework. For the full theory, equations, and publications, see:
+- Console certification reports  
+- JSON / CSV / Markdown summaries  
+- Plots written to `output/certify_planck/`
 
-# Citation
+---
 
-If you use this repository or the *Time as a Measurement* simulations in your research or publication, please cite:
+## **SECTION 10 — Reproducibility**
 
-> Ressler, T. Matthew. *Thermal Relativity: Time as a Measurement*. 2025.  
-> GitHub repository: [github.com/trmattressler/thermal_relativity](https://github.com/trmattressler/thermal_relativity)
+## Reproducibility
+
+- No stochastic processes unless explicitly seeded  
+- All certification thresholds are deterministic  
+- No tunable cosmological parameters  
+- Results are reproducible across runs and platforms
+
+## What This Solver Does *Not* Do
+
+- No ΛCDM fitting  
+- No parameter optimization  
+- No spacetime dynamics  
+- No metric assumptions  
+- No observational tuning  
+
+This solver tests **physical consistency**, not cosmological preference.
+
+## Citation
+
+If you use this solver or its certification methodology, please cite:
+
+> Ressler, T. Matthew. *Thermal Relativity: Unified Boltzmann Solver*. 2026.  
+> GitHub repository: https://github.com/yourname/yourrepo
 
 ```bibtex
-@misc{ressler2025taam,
+@misc{ressler2026trsolver,
   author       = {Ressler, T. Matthew},
-  title        = {Thermal Relativity: Time as a Measurement},
-  year         = {2025},
-  publisher    = {GitHub},
-  howpublished = {\url{https://github.com/trmattressler/thermal_relativity}},
-  note         = {Python simulations for cosmological modeling},
+  title        = {Thermal Relativity: Unified Boltzmann Solver},
+  year         = {2026},
+  howpublished = {\url{https://github.com/yourname/yourrepo}},
+  note         = {Causal-first cosmological solver},
 }
-
 ```
-## Author
-T. Matthew Ressler
-Independent Researcher, Troy, MI
-matt.ressler@protonmail.com
+---
 
-License
-This project is licensed under the MIT License. See LICENSE for details.
+## **SECTION 13 — Author & License**
+
+## Author
+
+**T. Matthew Ressler**  
+Independent Researcher  
+Troy, MI  
+matt.ressler@protonmail.com  
+
+## License
+
+This project is licensed under the MIT License.  
+See `LICENSE` for details.
+```
