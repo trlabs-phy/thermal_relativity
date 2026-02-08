@@ -56,28 +56,21 @@ thermal-energy bookkeeping**, not from geometric assumptions or expansion laws.
 The corresponding plot is generated during certification and saved to:
 
 output/certify_planck/capacity_scaling_1d.pdf
+output/certify_planck/capacity_scaling_1d.png
 
 This plot shows the instantaneous scaling exponent  
-\(\mathrm{d}\ln V / \mathrm{d}\ln a\) converging to **3** with zero residual.
+$\mathrm{d}\ln V / \mathrm{d}\ln a$ converging to **3** with zero residual.
 
 ## Solver Architecture (High Level)
 
-HistoryConfig
-  |
-  v
-history_step (Eq. 0 — the sole causal evolution)
-  |
-  v
-HistoryState
-  |
-  v
-Recorder (read-only history capture)
-  |
-  v
-certify_1d  -> causal consistency, ordering, visibility
-  |
-  v
-certify_3d  -> snapshot projection, structure, light bending
+| Stage | Component | Role |
+|------:|-----------|------|
+| 1 | HistoryConfig | Defines solver parameters and certification thresholds |
+| 2 | history_step | Executes Equation 0 (sole causal evolution loop) |
+| 3 | HistoryState | Stores instantaneous causal state |
+| 4 | Recorder | Captures read-only history (non-causal) |
+| 5 | certify_1d | Performs 1D causal certification (ordering, capacity, visibility) |
+| 6 | certify_3d | Performs 3D snapshot-based diagnostics (structure, light bending) |
 
 Architectural guarantees:
 
@@ -88,24 +81,21 @@ Architectural guarantees:
 
 ## Repository Structure (Core)
 
-tr/
-|-- history.py              # Core Eq. 0 solver (THE solver)
-|-- state.py                # HistoryState container
-|-- recorder.py             # Read-only history capture
-|-- run_solver.py           # Main entrypoint
-|
-|-- certify_planck/
-|   |-- certify_1d.py       # Causal (1D) certification
-|   |-- certify_3d.py       # 3D projection certification
-|   |-- causal/             # Pure 1D diagnostics
-|   |-- threed/             # Snapshot-based diagnostics
-|
-|-- utils/
-|   |-- build_snapshot.py
-|   |-- output.py
-|
-|-- output/
-|   |-- certify_planck/
+- `tr/`
+  - `history.py` — Core Eq. 0 solver (THE solver)
+  - `state.py` — HistoryState container
+  - `recorder.py` — Read-only history capture
+  - `run_solver.py` — Main entrypoint
+  - `certify_planck/`
+    - `certify_1d.py` — Causal (1D) certification
+    - `certify_3d.py` — 3D projection certification
+    - `causal/` — Pure 1D diagnostics
+    - `threed/` — Snapshot-based diagnostics
+  - `utils/`
+    - `build_snapshot.py`
+    - `output.py`
+  - `output/`
+    - `certify_planck/`
 
 ## Requirements
 
@@ -154,14 +144,14 @@ This solver tests **physical consistency**, not cosmological preference.
 If you use this solver or its certification methodology, please cite:
 
 > Ressler, T. Matthew. *Thermal Relativity: Unified Boltzmann Solver*. 2026.  
-> GitHub repository: https://github.com/yourname/yourrepo
+> GitHub repository: https://github.com/trmattressler/thermal_relativity
 
 ```bibtex
 @misc{ressler2026trsolver,
   author       = {Ressler, T. Matthew},
   title        = {Thermal Relativity: Unified Boltzmann Solver},
   year         = {2026},
-  howpublished = {\url{https://github.com/yourname/yourrepo}},
+  howpublished = {\url{https://github.com/trmattressler/thermal_relativity}},
   note         = {Causal-first cosmological solver},
 }
 ```
