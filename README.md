@@ -195,6 +195,10 @@ If you use this solver or its certification methodology, please cite:
   note         = {Causal-first cosmological solver},
 }
 ```
+If you use this software or its certification methodology in academic or technical work, please cite:
+
+> Ressler, T. Matthew. *Thermal Relativity: Unified Boltzmann Solver*. Zenodo, 2026.  
+> DOI: 10.5281/zenodo.XXXXXXX
 ---
 
 ## **SECTION 13 — Author & License**
@@ -211,3 +215,4 @@ matt.ressler@protonmail.com
 This project is licensed under the MIT License.  
 See `LICENSE` for details.
 ```
+
