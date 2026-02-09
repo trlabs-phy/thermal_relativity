@@ -143,6 +143,13 @@ Architectural guarantees:
 - **Python ≥ 3.10** (recommended: 3.11)
 - NumPy
 - Matplotlib
+- Math
+- Dataclasses
+- Typing
+- json
+- os
+- collections
+- csv
 
 ```bash
 pip install -r requirements.txt
