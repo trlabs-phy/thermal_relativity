@@ -206,7 +206,7 @@ If you use this solver or its certification methodology, please cite:
 If you use this software or its certification methodology in academic or technical work, please cite:
 
 > Ressler, T. Matthew. *Thermal Relativity: Unified Boltzmann Solver*. Zenodo, 2026.  
-> DOI: 10.5281/zenodo.XXXXXXX
+> [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18553987.svg)](https://doi.org/10.5281/zenodo.18553987)
 ---
 
 ## **SECTION 13 — Author & License**
