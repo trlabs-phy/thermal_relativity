@@ -118,13 +118,6 @@ os.makedirs("output", exist_ok=True)
 with open("output/history.json", "w") as f:
     json.dump(rec, f, indent=2)
 
-
-# ============================================================
-# Certification — 1D
-# ============================================================
-results_1d = certify_1d(rec, cfg=cfg)
-out1d = results_1d["output"]
-
 # ============================================================
 # Certification — 1D
 # ============================================================
